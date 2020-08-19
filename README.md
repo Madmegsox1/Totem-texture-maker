@@ -2,7 +2,7 @@
 grabs your skin and then creates a 1.12.2 totem texture!
 
 
-##INCSTRUCTIONS:
+## INCSTRUCTIONS:
 
 -Move your skin into the folder called totpy_build
 -run the totskinmaker.exe
