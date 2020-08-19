@@ -14,4 +14,4 @@ grabs your skin and then creates a 1.12.2 totem texture!
 
 -then check the folder where you put your skin in are there should be a new file called totem.png
 
-![alt text](https://ibb.co/G9npwh6)
+![Alt text](https://i.ibb.co/gdm91n2/aaaaaa.png)
