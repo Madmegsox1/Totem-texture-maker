@@ -8,7 +8,7 @@ grabs your skin and then creates a 1.12.2 totem texture!
 
 -run the totskinmaker.exe
 
--then input the name of the skin file (it has to have .png on the end)
+-then input the name of the skin file (it has to have .png on the end) - alternatively you can put the hole file dir
 
 -then choose if your skin in slim or normal
 
