@@ -6,7 +6,9 @@ i hade to remove the consel as the code was out dated and buggy
 
 ## INCSTRUCTIONS:
 
--Move your skin into the folder called totpy_build
+-clone the repository
+
+-Move your skin into the folder called tot_build
 
 -run the totskinmaker.exe
 
