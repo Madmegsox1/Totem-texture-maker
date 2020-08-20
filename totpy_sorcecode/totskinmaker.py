@@ -66,17 +66,17 @@ while a == True:
 
             if slim == "y":
 
-                l_arm_L_L1 = 48
+                l_arm_L_L1 = 44
                 t_arm_L_L1 = 20
-                r_arm_L_L1 = 51
-                b_arm_L_L1 = 32
+                r_arm_L_L1 = 47
+                b_arm_L_L1 = 31
 
                 arm_L_L1 = im.crop((l_arm_L_L1, t_arm_L_L1, r_arm_L_L1, b_arm_L_L1))
 
-                l_arm_L_L1 = 52
+                l_arm_L_L1 = 45
                 t_arm_L_L1 = 36
-                r_arm_L_L1 = 55
-                b_arm_L_L1 = 48
+                r_arm_L_L1 = 48
+                b_arm_L_L1 = 47
 
                 arm_L_L2 = im.crop((l_arm_L_L1, t_arm_L_L1, r_arm_L_L1, b_arm_L_L1))
 
@@ -86,17 +86,17 @@ while a == True:
                 arm_L= Image.alpha_composite(arm_L_L1, arm_L_L2)
 
 
-                l_arm_R_L1 = 36
+                l_arm_R_L1 = 37
                 t_arm_R_L1 = 52
-                r_arm_R_L1 = 39
-                b_arm_R_L1 = 64
+                r_arm_R_L1 = 40
+                b_arm_R_L1 = 63
 
                 arm_R_L1 = im.crop((l_arm_R_L1, t_arm_R_L1, r_arm_R_L1, b_arm_R_L1))
 
-                l_arm_R_L1 = 61
+                l_arm_R_L1 = 53
                 t_arm_R_L1 = 52
-                r_arm_R_L1 = 64
-                b_arm_R_L1 = 64
+                r_arm_R_L1 = 56
+                b_arm_R_L1 = 63
 
                 arm_R_L2 = im.crop((l_arm_R_L1, t_arm_R_L1, r_arm_R_L1, b_arm_R_L1))
 
@@ -126,20 +126,22 @@ while a == True:
                     totem.paste(im, (loc[locnum], loc2[locnum]))
                     locnum += 1
                 totem.save("totem.png")
+                gui.destroy()
+                exit()
                 
             elif slim == "n":
 
-                l_arm_L_L1 = 48
+                l_arm_L_L1 = 44
                 t_arm_L_L1 = 20
-                r_arm_L_L1 = 52
-                b_arm_L_L1 = 32
+                r_arm_L_L1 = 48
+                b_arm_L_L1 = 31
 
                 arm_L_L1 = im.crop((l_arm_L_L1, t_arm_L_L1, r_arm_L_L1, b_arm_L_L1))
 
-                l_arm_L_L1 = 52
+                l_arm_L_L1 = 44
                 t_arm_L_L1 = 36
-                r_arm_L_L1 = 56
-                b_arm_L_L1 = 48
+                r_arm_L_L1 = 48
+                b_arm_L_L1 = 47
 
                 arm_L_L2 = im.crop((l_arm_L_L1, t_arm_L_L1, r_arm_L_L1, b_arm_L_L1))
 
@@ -153,14 +155,14 @@ while a == True:
                 l_arm_R_L1 = 36
                 t_arm_R_L1 = 52
                 r_arm_R_L1 = 40
-                b_arm_R_L1 = 64
+                b_arm_R_L1 = 63
 
                 arm_R_L1 = im.crop((l_arm_R_L1, t_arm_R_L1, r_arm_R_L1, b_arm_R_L1))
 
-                l_arm_R_L1 = 60
+                l_arm_R_L1 = 52
                 t_arm_R_L1 = 52
-                r_arm_R_L1 = 64
-                b_arm_R_L1 = 64
+                r_arm_R_L1 = 56
+                b_arm_R_L1 = 63
 
                 arm_R_L2 = im.crop((l_arm_R_L1, t_arm_R_L1, r_arm_R_L1, b_arm_R_L1))
 
@@ -182,7 +184,7 @@ while a == True:
                 #totem.paste(legs(4,20))
 
 
-                imi2 = [head, chest, arm_R, arm_L, legs]
+                imi2 = [head, chest, arm_L, arm_R, legs]
                 loc = [4, 4, 0, 12, 4]
                 loc2 = [0, 8, 8, 8, 20]
                 locnum = 0
@@ -206,9 +208,9 @@ while a == True:
                 return
         
         #/\/\/\/\/\/\/\/\/\HEAD/\/\/\/\/\/\/\/\
-        l_head_L1 = 16
+        l_head_L1 = 8
         t_head_L1 = 8
-        r_head_L1 = 24
+        r_head_L1 = 16
         b_head_L1 = 16
 
         im_head_L1 = im.crop((l_head_L1, t_head_L1, r_head_L1, b_head_L1))
