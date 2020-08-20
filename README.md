@@ -18,4 +18,4 @@ i hade to remove the consel as the code was out dated and buggy
 
 ![Alt text](https://i.ibb.co/gdm91n2/aaaaaa.png)
 
-![Alt text](https://i.ibb.co/wcJ0GPR/aaaaaa.png)
+![Alt text](https://i.ibb.co/DfD55cc/ezgif-com-video-to-gif.gif)
