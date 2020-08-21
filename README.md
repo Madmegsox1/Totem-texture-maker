@@ -1,22 +1,34 @@
 # Totem-texture-maker
-grabs your skin and then creates a 1.12.2 totem texture!
+Grabs your skin and then creates a 1.12.2 totem texture!
 
-i hade to remove the consel as the code was out dated and buggy
+I hade to remove the consel as the code was out dated and buggy
+
+
 
 
 ## INCSTRUCTIONS:
 
--clone the repository
+### OFFLINE MODE:
 
--Move your skin into the folder called tot_build
+- clone the repository
 
--run the totskinmaker.exe
+- Move your skin into the folder called tot_build
 
--then input the name of the skin file (it has to have .png on the end) - alternatively you can put the hole file dir
+- run the totskinmaker.exe
 
--then choose if your skin in slim or normal
+- then input the name of the skin file (it has to have .png on the end) - alternatively you can put the hole file dir
 
--then check the folder where you put your skin in are there should be a new file called totem.png
+- then choose if your skin in slim or normal
+
+- then check the folder where you put your skin in are there should be a new file called totem.png
+
+### ONLINE MODE:
+- To use the new API you will need to be connected to the internet 
+- then click on ONLINE 
+- then enter your username or UUID(UUID is preferred)
+- then click go
+- now if you look in the folder the .exe is in then you will see the totem texture!
+
 
 ![Alt text](https://i.ibb.co/gdm91n2/aaaaaa.png)
 
