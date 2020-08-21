@@ -24,9 +24,13 @@ I hade to remove the consel as the code was out dated and buggy
 
 ### ONLINE MODE:
 - To use the new API you will need to be connected to the internet 
+
 - then click on ONLINE 
+
 - then enter your username or UUID(UUID is preferred)
+
 - then click go
+
 - now if you look in the folder the .exe is in then you will see the totem texture!
 
 
