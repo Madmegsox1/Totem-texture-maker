@@ -1,10 +1,14 @@
 # Totem-texture-maker
 grabs your skin and then creates a 1.12.2 totem texture!
 
+i hade to remove the consel as the code was out dated and buggy
+
 
 ## INCSTRUCTIONS:
 
--Move your skin into the folder called totpy_build
+-clone the repository
+
+-Move your skin into the folder called tot_build
 
 -run the totskinmaker.exe
 
@@ -16,4 +20,4 @@ grabs your skin and then creates a 1.12.2 totem texture!
 
 ![Alt text](https://i.ibb.co/gdm91n2/aaaaaa.png)
 
-![Alt text](https://i.ibb.co/wcJ0GPR/aaaaaa.png)
+![Alt text](https://i.ibb.co/DfD55cc/ezgif-com-video-to-gif.gif)
