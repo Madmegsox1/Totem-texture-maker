@@ -33,6 +33,14 @@ I hade to remove the consel as the code was out dated and buggy
 
 - now if you look in the folder the .exe is in then you will see the totem texture!
 
+### ANIMATOR:
+- To use the animator you will need to select the number of frames in the animation
+
+- you will then be asked to enter each img dir
+
+- now if you look in the folder the .exe is in then you will see the totem texture!
+
+
 
 ![Alt text](https://i.ibb.co/gdm91n2/aaaaaa.png)
 
