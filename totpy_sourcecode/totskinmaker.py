@@ -4,6 +4,119 @@ import requests
 import os
 
 
+def animate():
+    main.withdraw()
+    def back():
+        main.deiconify()
+        gui3.destroy()
+    
+    def img_cre():
+        global num
+        global frames
+        global base
+        global num2
+        global label3
+
+        num = 1
+        num2 = 0
+        frames = entry.get()
+        w = 16
+        h = 32
+        total_hight = 32 * int(frames)
+        
+        base = Image.new("RGBA", (32, total_hight), "WHITE")
+        base.putalpha(0)
+
+        label3.pack_forget()
+        label6.pack_forget()
+        
+        label6.pack()
+        entry.pack_forget()
+        label7.pack_forget()
+        entry2.pack()
+        label7.pack()
+        button.pack_forget()
+        button3.pack_forget()
+        button2.pack()
+        button3.pack()
+
+    def open_file():
+        global num
+        global frames
+        global base
+        global num2
+
+        img = entry2.get()
+        if num == int(frames):
+            base.show()
+            gui3.destroy()
+            main.deiconify()
+            return()
+        else:
+            
+
+            try:
+                im = Image.open(img)
+                width, height = im.size
+            except:
+                print("not a file dir")
+                return
+
+
+            if width != 32:
+                print("Please enter an img with a resolution of 16x32")
+                #break
+                return
+            if height != 32:
+                print("Please enter an img with a resolution of 16x32")
+                #break
+                return
+            
+            past_hight = num2 * 32
+            num2 += 1
+            print(past_hight)
+            base.paste(im, (0, past_hight))
+            base.save("totem.png")
+
+        
+
+        
+            
+
+        
+    global num
+    num = 1  
+    gui3 = tk.Tk()
+    gui3.geometry("200x250")
+    gui3.title("animator")
+    gui3.configure(bg='#5D5D66')
+
+    global label3
+
+    label = tk.Label(gui3, text="Totem skin animator", bg="#5D5D66", fg="white").pack()
+    label = tk.Label(gui3, text="\n", bg="#5D5D66").pack()
+    string1 = "input the dir of the img"
+    label6 =tk.Label(gui3, text=string1, bg="#5D5D66", fg="white")
+    label3 = tk.Label(gui3, text="Please input the number of frames", bg="#5D5D66", fg="white")
+    label3.pack()
+    entry = tk.Entry(gui3, bg="#787878", bd=0.5, fg="white")
+    entry.pack()
+
+    entry2 = tk.Entry(gui3, bg="#787878", bd=0.5, fg="white")
+
+    label7 = tk.Label(gui3, text="\n", bg="#5D5D66")
+    label7.pack()
+
+    button = tk.Button(gui3, text="ENTER", fg="white", width = 4, bg="#787878", bd=0.5, command=img_cre)
+    button.pack()
+    button2 = tk.Button(gui3, text="GO", fg="white", width = 4, bg="#787878", bd=0.5, command=open_file)
+    button3 = tk.Button(gui3, text="BACK", fg="white", width = 4, bg="#787878", bd=0.5, command=back)
+    button3.pack()
+
+    label2 = tk.Label(gui3, text="please enter a number", bg="#5D5D66", fg="white")
+
+
+
 
 def online():
     main.withdraw()
@@ -20,6 +133,12 @@ def online():
         file = open("totem.png", "wb")
         file.write(skin.content)
         file.close()
+        img = Image.open("totem.png")
+        totem2 = Image.new("RGBA", (32,32), "WHITE")
+        totem2.putalpha(0)
+
+        totem2.paste(img, (10, 0))
+        totem2.save("totem.png") 
         main.deiconify()
         gui2.destroy()
 
@@ -33,7 +152,7 @@ def online():
     gui2 = tk.Tk()
 
     gui2.geometry("200x250")
-    gui2.title("Menue")
+    gui2.title("online")
     gui2.configure(bg='#5D5D66')
 
 
@@ -190,7 +309,12 @@ def offline():
                 for im in imi2:
                     totem.paste(im, (loc[locnum], loc2[locnum]))
                     locnum += 1
-                totem.save("totem.png")
+
+                totem2 = Image.new("RGBA", (32,32), "WHITE")
+                totem2.putalpha(0)
+                totem2.paste(totem, (10, 0)) 
+                totem2.save("totem.png")
+
                 main.deiconify()
                 gui.destroy()
                 
@@ -242,7 +366,7 @@ def offline():
 
                 totem.putalpha(0)
 
-                totem.paste(head, (4,0))
+                #totem.paste(head, (4,0))
                 #(chest (4,8))
                 #totem.paste(arm_R(0,8))
                 #totem.paste(arm_L(12,8))
@@ -257,7 +381,13 @@ def offline():
                     totem.paste(im, (loc[locnum], loc2[locnum]))
                     locnum += 1
 
-                totem.save("totem.png")
+                totem2 = Image.new("RGBA", (32,32), "WHITE")
+                totem2.putalpha(0)
+
+                totem2.paste(totem, (10, 0)) 
+
+
+                totem2.save("totem.png")
 
 
                 main.deiconify()
@@ -459,10 +589,15 @@ label = tk.Label(main, text="\n\n", bg="#5D5D66").pack()
 button = tk.Button(main, text="OFFLINE", fg="white", bg="#787878", bd=0.5, command=offline)
 button.pack()
 
-label2 = tk.Label(main, text="\n\n", bg="#5D5D66").pack()
+label2 = tk.Label(main, text="\n", bg="#5D5D66").pack()
 
 button2 = tk.Button(main, text="ONLINE", fg="white", bg="#787878", bd=0.5,command=online)
 button2.pack()
+
+label2 = tk.Label(main, text="\n", bg="#5D5D66").pack()
+
+button3 = tk.Button(main, text="ANIMATOR", fg="white", bg="#787878", bd=0.5,command=animate)
+button3.pack()
 
 
 main.mainloop()
